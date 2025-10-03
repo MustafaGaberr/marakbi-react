@@ -25,7 +25,12 @@ function ForgotPassword() {
       await new Promise(resolve => setTimeout(resolve, 1000));
       
       console.log('Password reset request:', { email });
-      setSuccess('Password reset link has been sent to your email');
+      setSuccess('Password reset code has been sent to your email');
+      
+      // Navigate to verification page after showing success message
+      setTimeout(() => {
+        navigate('/verify-code');
+      }, 1500);
       
     } catch (err) {
       console.error('Password reset error:', err);

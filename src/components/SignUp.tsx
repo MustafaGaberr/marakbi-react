@@ -40,8 +40,8 @@ function SignUp() {
       
       console.log('Sign up successful:', { fullName, email, password, agreeTerms });
       
-      // Navigate to home page
-      navigate('/');
+      // Navigate to verification page
+      navigate('/verify-code');
       
     } catch (err) {
       console.error('Sign up error:', err);
